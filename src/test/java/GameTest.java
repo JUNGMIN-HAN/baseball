@@ -53,6 +53,8 @@ class GameTest {
     void returnSolvedResultIfSomeMatchedNumber() {
         generateQunestion("123");
         assertMatchNumber(game.guess("120"), false, 2, 0);
+        assertMatchNumber(game.guess("061"), false, 0, 1);
+        assertMatchNumber(game.guess("136"), false, 1, 1);
     }
 
     private void generateQunestion(String questionNumber) {
